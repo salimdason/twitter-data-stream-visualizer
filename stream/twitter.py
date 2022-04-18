@@ -1,15 +1,7 @@
 import tweepy
 from pykafka import KafkaClient
 import json
-import os
 import auth
-
-"""Auth credentials"""
-API_KEY=os.environ.get('API_KEY')
-API_SECRET_KEY=os.environ.get('API_SECRET_KEY')
-ACCESS_TOKEN=os.environ.get('ACCESS_TOKEN')
-ACCESS_TOKEN_SECRET=os.environ.get('ACCESS_TOKEN_SECRET')
-
 
 def get_kafka_client():
     return KafkaClient(hosts='127.0.0.1:9092')
